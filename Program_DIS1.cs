@@ -20,15 +20,20 @@ namespace Assignment
 
             Console.WriteLine("\n" + "Print Triangle - Output3 :");
 
-            int n3 = 5;            printTriangle(n3);
+            int n3 = 5;
+            printTriangle(n3);
 
             Console.WriteLine("\n" + " numJewelsInStones - Output4 :");
 
-            int[] J = new int[] { 1, 3 };            int[] S = new int[] { 1, 3, 3, 2, 2, 2, 2, 2 };            int r4 = numJewelsInStones(J, S);            Console.WriteLine(r4);
+            int[] J = new int[] { 1, 3 };
+            int[] S = new int[] { 1, 3, 3, 2, 2, 2, 2, 2 };
+            int r4 = numJewelsInStones(J, S);
+            Console.WriteLine(r4);
 
             Console.WriteLine("\n" + " LargestCommonSubArray -Output5 :");
 
-            int[] arr1 = { 1, 2, 5, 6, 7, 8, 9 };            int[] arr2 = { 1, 2, 3, 4, 5, 7, 8, 9 };
+            int[] arr1 = { 1, 2, 5, 6, 7, 8, 9 };
+            int[] arr2 = { 1, 2, 3, 4, 5, 7, 8, 9 };
             int[] r5 = getLargestCommonSubArray(arr1, arr2);
             foreach (int item in r5)
             {
@@ -90,13 +95,71 @@ namespace Assignment
             //catch exception
             catch
             {
-                WriteLine("Exception occured while computing printSelfDividingNumbers()");
+                WriteLine("tion occured while computing printSelfDividingNumbers()");
             }
         }
 
 
-        public static void printSeries(int n)        {            try            {                int count = 0;                for (int i = 1; i <= n; i++)                {                    for (int j = 1; j <= i; j++)                    {                        if (count <= n)                        {                            Console.Write(i + " ");                            count = count + 1;                        }                    }                }            }            catch            {                Console.WriteLine("Exception occured while computing printSeries()");            }        }
-        public static void printTriangle(int n)        {            for (int i = n; i > 0; i--)            {                for (int k = 0; k < n - i; k++)                {                    Console.Write(' ');                }                for (int j = i; j <= 2 * i - 1; j++)                {                    Console.Write("* ");                }                for (int p = 0; p < i - 1; ++p)                    Console.Write("* ");                Console.Write("\n");            }        }        public static int numJewelsInStones(int[] J, int[] S)        {            int c = 0;            for (int i = 0; i < S.Length; i++)            {                for (int j = 0; j < J.Length; j++)                {                    if (J[j] == S[i])                    {                        c = c + 1;                    }                }            }            return c;        }
+        public static void printSeries(int n)
+        {
+            try
+            {
+                int count = 0;
+                for (int i = 1; i <= n; i++)
+                {
+                    for (int j = 1; j <= i; j++)
+                    {
+                        if (count <= n)
+                        {
+                            Console.Write(i + " ");
+                            count = count + 1;
+
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Exception occured while computing printSeries()");
+            }
+        }
+        public static void printTriangle(int n)
+        {
+            for (int i = n; i > 0; i--)
+            {
+                for (int k = 0; k < n - i; k++)
+                {
+                    Console.Write(' ');
+                }
+                for (int j = i; j <= 2 * i - 1; j++)
+                {
+                    Console.Write("* ");
+                }
+                for (int p = 0; p < i - 1; ++p)
+                    Console.Write("* ");
+
+                Console.Write("\n");
+            }
+
+        }
+
+        public static int numJewelsInStones(int[] J, int[] S)
+        {
+            int c = 0;
+            for (int i = 0; i < S.Length; i++)
+            {
+                for (int j = 0; j < J.Length; j++)
+                {
+                    if (J[j] == S[i])
+                    {
+                        c = c + 1;
+                    }
+                }
+            }
+            return c;
+
+        }
+
 
     public static int[] getLargestCommonSubArray(int[] X, int[] Y)
         {
@@ -239,7 +302,8 @@ namespace Assignment
         } */
     
         public static void solvePuzzle()
-        {            try
+        {
+            try
             {
 
                // Console.WriteLine("Input1 :");
@@ -251,7 +315,12 @@ namespace Assignment
 
 
 
-            }            catch            {                Console.WriteLine("Exception occured while computing solvePuzzle()");            }        }
+            }
+            catch
+            {
+                Console.WriteLine("Exception occured while computing solvePuzzle()");
+            }
+        }
     }
 }
 /* write your self-reflection here as a comment :
